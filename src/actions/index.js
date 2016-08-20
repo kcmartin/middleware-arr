@@ -1,6 +1,6 @@
 import { FETCH_USERS } from './types';
 
-export function fectchUsers() {
+export function fetchUsers() {
   return {
     type: FETCH_USERS,
     payload: [
