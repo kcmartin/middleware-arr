@@ -25,7 +25,7 @@ class UserList extends Component {
     return (
       /* for each user, call the helper function renderUser and return it
       into the jsx div */
-      <div>
+      <div className="user-list">
         {this.props.users.map(this.renderUser)}
       </div>
     );
