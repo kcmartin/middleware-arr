@@ -7,7 +7,15 @@ export default function({ dispatch }) {
       return next(action);
     }
 
-    console.log('We dont have a promise', action);
+    // make sure the action's promise resolves
+    action.payload
+      .then(function(response) {
+        // create new action with the old type
+        // but replace the promise with the response data
+        const newAction = { ...action, payload: response };
+        // take this action and send it through the topmost reducer again
+        dispatch(newAction);
+      });
   }
 
 }
