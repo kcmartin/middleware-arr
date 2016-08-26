@@ -23,7 +23,7 @@
 
 .btn-primary {
     background: #0099cc;
-    color: #ffffff!important;
+    color: #ffffff!important; /* fix btn text color */
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
